@@ -1,3 +1,4 @@
+(note: with the exception of the error vs space plot, all plots below should have y-axis Relative Error and x-axis Approximation Rank)
 # Synthetic Data
 (the "Normal clusters" distribution chooses 20 cluster centers uniformly from the unit hypercube, then samples 100 points from a normal distribution with mean at the cluster center and with stddev=0.1 for each cluster center)
 Note a superior err/rank tradeoff from the HDF in all cases below except the high d, high p, normal clusters settings. This is an example of a case where "the lack of additional compression based on the harmonics will result in poor efficiency" as discussed in the Limitations section of the main text, and is the subject of ongoing research. 
@@ -28,9 +29,9 @@ Note a superior err/rank tradeoff from the HDF in all cases below except the hig
 * [Uniform distribution on surface of unit hypersphere](https://github.com/neurips352/neurips22/blob/main/plots/spher_relerr_vs_rank_gaussian_d30_plot.pdf)
 * [Normal clusters](https://github.com/neurips352/neurips22/blob/main/plots/mix_relerr_vs_rank_gaussian_d30_plot.pdf)
 ## Gaussian kernel, normal distribution, comparison with improved fast Gauss transform
-* [d=3](https://github.com/neurips352/neurips22/blob/main/plots/d3_fgt.pdf)
-* [d=5](https://github.com/neurips352/neurips22/blob/main/plots/d5_fgt.pdf)
-* [d=7](https://github.com/neurips352/neurips22/blob/main/plots/d7_fgt.pdf)
+* [d=3](https://github.com/neurips352/neurips22/blob/main/plots/d3_fgt.png)
+* [d=5](https://github.com/neurips352/neurips22/blob/main/plots/d5_fgt.png)
+* [d=7](https://github.com/neurips352/neurips22/blob/main/plots/d7_fgt.png)
 ## Error vs space experiment
 
 To examine memory usage, we reran the error vs time synthetic experiment from the main paper, replacing @elapsed with @allocated in Julia. [The results for the HDF and Nystrom factorizations are here](https://github.com/neurips352/neurips22/blob/main/plots/err_vs_space_plot.pdf).
